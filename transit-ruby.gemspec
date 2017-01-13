@@ -26,7 +26,7 @@ Gem::Specification.new do |spec|
     public_key_path = nil  # not yet supported
   else
     spec.files    = files - jruby_files
-    spec.add_dependency "oj",                             "~> 2.10.1"
+    spec.add_dependency "oj",                             "= 2.10.1"
     spec.add_dependency "msgpack",                        "~> 0.5.8"
     spec.add_development_dependency "yard",               "~> 0.8.7.4"
     spec.add_development_dependency "redcarpet",          "~> 3.1.1"
@@ -38,7 +38,7 @@ Gem::Specification.new do |spec|
   spec.test_files    = `git ls-files -- spec/*`.split("\n")
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "addressable",       "~> 2.3.6"
+  spec.add_dependency "addressable",       ">= 2.3.6"
   spec.add_development_dependency "rake",  "~> 10.1"
   spec.add_development_dependency "rspec", "~> 3.0"
   spec.add_development_dependency "wrong", "~> 0.7.1"
