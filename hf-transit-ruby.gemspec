@@ -7,7 +7,7 @@ jruby_files = files.grep(/jruby/) + ["lib/transit.jar", "Jarfile"]
 
 Gem::Specification.new do |spec|
   spec.name          = "hf-transit-ruby"
-  spec.version       = "0.8dev"
+  spec.version       = "0.8.dev.1"
   spec.authors       = ["Russ Olsen","David Chelimsky","Yoko Harada"]
   spec.email         = ["russ@cognitect.com","dchelimsky@cognitect.com","yoko@cognitect.com"]
   spec.summary       = %q{Transit marshalling for Ruby}
@@ -26,7 +26,7 @@ Gem::Specification.new do |spec|
     public_key_path = nil  # not yet supported
   else
     spec.files    = files - jruby_files
-    spec.add_dependency "oj",                             "= 2.10.1"
+    spec.add_dependency "oj",                             ">= 2.9.0"
     spec.add_dependency "msgpack",                        "~> 0.5.8"
     spec.add_development_dependency "yard",               "~> 0.8.7.4"
     spec.add_development_dependency "redcarpet",          "~> 3.1.1"

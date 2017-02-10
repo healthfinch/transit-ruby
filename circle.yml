@@ -1,0 +1,4 @@
+deployment:
+  production:
+    branch: master
+    commands: bin/build_and_upload_gem.sh
